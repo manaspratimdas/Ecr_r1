@@ -24,7 +24,34 @@ public class EcrContainerServiceImpl implements EcrContainerService{
 			System.out.println("container  ->>>"+lstContainer.get(i));
 		}
 		
+		
 		return lstContainer;
 	}
 
+	public Container getContainerById(Long id) {
+		
+		System.out.println("in service  getContainerById");
+		return ecrContainerRepository.findOne(id);
+	}
+
+	public Container getContainer(Long id) {
+		
+		return ecrContainerRepository.findById(id);
+	}
+
+	public List<Container> getContainersByCompanyId(Long companyId) {
+		
+		
+		return ecrContainerRepository.findByCompanyId(companyId);
+	}
+
+	public List<Container> saveOrUpdateContainers(List<Container> containers) {
+		
+	
+		
+		return ecrContainerRepository.save(containers);
+	}
+
+	
+	
 }
