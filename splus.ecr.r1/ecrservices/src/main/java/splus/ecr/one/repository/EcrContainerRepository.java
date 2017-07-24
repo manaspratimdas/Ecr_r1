@@ -11,5 +11,10 @@ import splus.ecr.one.model.Container;
 public interface EcrContainerRepository extends JpaRepository<Container, Long>{
 	
 	List<Container> findAll();
+	
+	Container findById(Long id);
+	
+	Container findOne(Long id);
 
+	List<Container> findByCompanyId(Long companyId);
 }
