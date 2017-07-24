@@ -19,6 +19,18 @@ public class EcrContainerController {
 
 	@Autowired
 	EcrContainerService ecrContainerService;
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@RequestMapping(value = "/containers/test", method = RequestMethod.GET)
+	public ResponseEntity testIntegration() {
+
+		System.out.println("in list getAllContainers controller");
+
+		
+		return new ResponseEntity("OK it is not connected", HttpStatus.OK);
+
+	}
+
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@RequestMapping(value = "/containers", method = RequestMethod.GET)
