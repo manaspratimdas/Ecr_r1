@@ -37,7 +37,7 @@ export class Inventory {
         type: 'number'
       },
       c_contno: {
-        title: 'Cont No.',
+        title: 'Container No.',
         type: 'string'
       },
       c_size: {
